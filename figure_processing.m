@@ -15,9 +15,9 @@ name='figure name';
 type='pdf'; 
 
 % set position:[left bottom width height]
-outer_position =[0 0 0.7 0.8];
-inner_position=[0.1 0.1 0.4 0.5];
-set(groot,'defaultFigurePaperPositionMode','auto')
+outer_position =[0 0 1 1];
+inner_position=[0.3 0.1 0.4 0.5];
+% set(groot,'defaultFigurePaperPositionMode','auto')
 %% 
 fig=gcf;
 ax=gca;
