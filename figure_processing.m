@@ -14,8 +14,8 @@ linewidth=2;
 name='figure name';
 type='pdf'; 
 % set position:[left bottom width height]
-outer_position =[0 0 1 1];
-inner_position=[0.3 0.1 0.4 0.5];
+% outer_position =[0 0 1 1];
+% inner_position=[0.3 0.1 0.4 0.5];
 % set(groot,'defaultFigurePaperPositionMode','auto')
 %% 
 fig=gcf;
@@ -34,12 +34,14 @@ ax.XScale =Xscale;
 ax.YScale=Yscale;
 
 % line width
-p=ax.Children;
-p.LineWidth =linewidth;
+% p=ax.Children;
+% p.LineWidth =linewidth;
+set(findall(gca, 'Type', 'Line'),'LineWidth',1.5);
 
 % position
-ax.OuterPosition=outer_position;
-ax.InnerPosition=inner_position;
+% ax.OuterPosition=outer_position;
+% ax.InnerPosition=inner_position;
+set(gca,'FontSize',14);
 
 % export to file
 saveas(gcf,name,type)
